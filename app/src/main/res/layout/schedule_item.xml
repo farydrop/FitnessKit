@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/corner_radius"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/ivColor"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/purple_200" />
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="10:00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/ivColor"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLessonsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Персональная тренировка"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStartTime"
+            app:layout_constraintStart_toEndOf="@+id/tvStartTime"
+            app:layout_constraintTop_toTopOf="@+id/tvStartTime" />
+
+
+    <TextView
+        android:id="@+id/tvEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="10:00"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartTime"
+        app:layout_constraintStart_toStartOf="@+id/ivColor"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_person_outline_24"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tvEndTime"
+        app:layout_constraintTop_toTopOf="@+id/tvEndTime"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndTime"/>
+
+    <TextView
+        android:id="@+id/tvTrainerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Григорьев Ярослав"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivPerson"
+        app:layout_constraintTop_toTopOf="@+id/tvEndTime"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndTime"/>
+
+    <ImageView
+        android:id="@+id/ivPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/baseline_pin_drop_24"
+        app:layout_constraintEnd_toStartOf="@+id/tvPlace"
+        app:layout_constraintTop_toTopOf="@+id/tvEndTime"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndTime"/>
+
+    <TextView
+        android:id="@+id/tvPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="Студия 2"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/tvEndTime"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEndTime"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
