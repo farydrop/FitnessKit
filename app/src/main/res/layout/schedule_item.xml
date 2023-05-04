@@ -5,7 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/corner_radius"
     android:orientation="vertical"
-    android:layout_marginBottom="10dp">
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
 
         <ImageView
             android:id="@+id/ivColor"
@@ -45,12 +47,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
         android:text="10:00"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/tvStartTime"
         app:layout_constraintStart_toStartOf="@+id/ivColor"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvStartTime" />
 
     <ImageView
         android:id="@+id/ivPerson"
@@ -77,7 +78,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_pin_drop_24"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintStart_toStartOf="@+id/ivPerson"
         app:layout_constraintTop_toBottomOf="@+id/ivPerson"
         app:layout_constraintEnd_toEndOf="@+id/ivPerson"

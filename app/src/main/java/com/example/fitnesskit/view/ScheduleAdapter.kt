@@ -1,17 +1,14 @@
 package com.example.fitnesskit.view
 
 import android.annotation.SuppressLint
-import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.ShapeDrawable
+import android.graphics.*
+import android.graphics.drawable.*
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesskit.R
 import com.example.fitnesskit.databinding.ScheduleItemBinding
@@ -30,9 +27,12 @@ class ScheduleAdapter : RecyclerView.Adapter<ScheduleAdapter.ScheduleHolder>() {
             itemBinding.tvStartTime.text = lesson.startTime
             itemBinding.tvLessonsName.text = lesson.name
             itemBinding.tvEndTime.text = lesson.endTime
-            itemBinding.ivColor.setBackgroundColor(Color.parseColor(lesson.color))
             itemBinding.tvTrainerName.text = trainer.full_name
             itemBinding.tvPlace.text = lesson.place
+
+            val bitmap = (ContextCompat.getDrawable(itemView.context,R.drawable.rounded_corner) as GradientDrawable)
+            bitmap.setColor(Color.parseColor(lesson.color))
+            itemBinding.ivColor.setImageDrawable(bitmap)
         }
     }
 
