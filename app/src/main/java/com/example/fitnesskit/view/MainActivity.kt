@@ -7,6 +7,7 @@ import com.example.fitnesskit.R
 import com.example.fitnesskit.databinding.ActivityMainBinding
 import com.example.fitnesskit.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Collections
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.getTrainersList()
         viewModel.myTrainersList.observe(this) { list ->
             list.body()?.let {
-                scheduleAdapter.setList(it.trainers,it.lessons) }
+                scheduleAdapter.setList(it.trainers,it.lessons)
+            }
         }
 
     }
